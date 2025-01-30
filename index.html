@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QFL-ADEC</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: white;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5rem 1rem;
+        }
+        header nav {
+            display: flex;
+            margin-right: 3rem; /* Adds consistent spacing for all links collectively */
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 60px;
+            margin-right: 10px;
+        }
+        .flag {
+            height: 20px;
+            margin-left: 10px;
+        }
+        nav {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 70px;
+            right: 0.1rem;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        nav a {
+            color: #003865;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 0.8rem 1.5rem;
+            display: block;
+        }
+        nav a:hover {
+            background-color: #f4f4f9;
+        }
+        .menu-icon {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            margin-right: 2rem;
+        }
+        .menu-icon div {
+            width: 25px;
+            height: 3px;
+            background-color: #003865;
+        }
+        .hero {
+            margin-top: 80px;
+            background: linear-gradient(rgba(0, 56, 101, 0.8), rgba(0, 56, 101, 0.8)), url('./network-banner.png') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+        .hero h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+        section {
+            padding: 2rem;
+            margin: auto;
+            max-width: 900px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+            border-radius: 8px;
+        }
+        .section-title {
+            color: #003865;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #003865;
+            color: white;
+            margin-top: 2rem;
+        }
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        @media (min-width: 768px) {
+            nav {
+                display: flex !important;
+                flex-direction: row;
+                position: static;
+                box-shadow: none;
+                background: none;
+                border-radius: 0;
+            }
+            .menu-icon {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+       <!-- <img src="./logo.png" alt="DiaBeCo"> -->
+       <h2>QFL-ADEC</h2>
+    </div>
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <nav id="navMenu" style="display: none;">
+        <a href="project.html">Project</a>
+        <a href="partners.html">Partners</a>
+        <a href="news.html">News</a>
+        <a href="contacts.html">Contacts</a>
+    </nav>
+</header>
+
+<div class="hero">
+    <h2>Quantum Federated Learning for Anomaly Detection in Electrical Consumption</h2>
+    <p>Advancing Energy Monitoring with Quantum Federated Learning for Secure and Efficient Anomaly Detection.</p>
+</div>
+
+<section id="about">
+    <h2 class="section-title">About the Project</h2>
+    <p>
+        This project proposal aims to develop a Quantum Federated Learning (QFL) infrastructure for training Artificial Intelligence (AI) models using electricity consumption data from various energy companies. The objective is to perform Anomaly Detection to identify irregular events such as unauthorized operations, measurement defects, and energy losses, thereby optimizing energy distribution and blackout management.
+
+		The project emphasizes research to explore cutting-edge Quantum Machine Learning (QML) techniques for data analysis and anomaly detection. The use of a federated learning system ensures privacy by preventing the sharing of sensitive energy consumption data while enabling organizations to train highly customized AI models.
+
+		To facilitate operational use, a dedicated dashboard will be implemented, complying with the AI Act regulations. This dashboard will integrate a Human-In-The-Loop (HITL) approach, allowing operators to actively monitor and manage the learning process, with all operations recorded on a blockchain.
+
+		By leveraging emerging QC and QFL technologies, this initiative seeks to revolutionize energy monitoring and anomaly management. Expected benefits include faster responses to blackouts and proactive anomaly detection, ultimately improving energy resource management and reducing costs. Energy operators will gain advanced tools for assessing consumption strategies and developing new energy policies, making this project a crucial step in the digital transformation of the sector.
+    </p>
+</section>
+
+<section id="impact">
+    <h2 class="section-title">Project Impact</h2>
+    <p>Once operational, the solution is expected to bring significant benefits, particularly in the energy sector, where it will enhance infrastructure resilience and efficiency. In the short term, it will enable rapid responses to anomalies, minimizing blackout disruptions. Over time, proactive energy management will reduce service interruptions, improve quality, and minimize waste.</p>
+    <p>Technical staff will gain access to cutting-edge tools, empowering them to analyze consumption patterns, detect irregularities, and refine management strategies. This proactive approach will also support targeted preventive policies, reducing network disruptions and unauthorized energy use.</p>
+    <p>Economically, organizations adopting advanced monitoring and anomaly detection systems will attract investments and collaborations, boosting competitiveness and reputation. The integration of AI and QC technologies will drive economic growth, create specialized job opportunities, and enhance sector innovation.</p>
+    <p>Cost savings will arise from reduced downtime and optimized maintenance efforts, while environmental benefits include lower energy waste and a reduced carbon footprint, aligning with sustainability goals.</p>
+    <p>Data security is a core focus, with QFL ensuring that only AI model weights are shared, preserving user privacy and complying with GDPR. Blockchain accountability and the HITL paradigm will further enhance system reliability and user trust.</p>
+    <p>Finally, the project will foster scientific research and education through collaborations with research institutes and universities, promoting AI and QC advancements in energy management.</p>
+</section>
+
+
+<section id="details">
+    <h2 class="section-title">Project Details</h2>
+    <ul>
+        <li><strong>Duration:</strong> 12 months</li>
+        <li><strong>Project Acronym:</strong> QFL-ADEC</li>
+        <li><strong>Project Title:</strong> Quantum Federated Learning for Anomaly Detection in Electrical Consumption</li>
+        <li><strong>Partners:</strong>
+            <ul>
+                <li>I.T. Svil Srl (SME) – Gianvito Petrillo (<a href="mailto:Gianvito.petrillo@itsvil.it">Gianvito.petrillo@itsvil.it</a>)</li>
+            </ul>
+        </li>
+        <li><strong>Funding:</strong> NQSTI, PNRR MISSIONE 4, FINANZIATO DALL’UNIONE EUROPEA – NEXTGENERATIONEU</li>
+    </ul>
+</section>
+
+<footer>
+    <p>For more information, contact <a href="mailto:Gianvito.petrillo@itsvil.it">Gianvito.petrillo@itsvil.it</a>.</p>
+    <p>&copy; 2025 QFL-ADEC Project. All rights reserved.</p>
+</footer>
+
+
+<script>
+    let isMenuOpen = false;
+
+    function toggleMenu() {
+        const navMenu = document.getElementById('navMenu');
+        isMenuOpen = !isMenuOpen;
+        navMenu.style.display = isMenuOpen ? 'flex' : 'none';
+    }
+</script>
+
+</body>
+</html>
+
+
+
+
